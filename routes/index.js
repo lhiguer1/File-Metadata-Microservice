@@ -9,7 +9,6 @@ router.get('/', function (req, res, next) {
 });
 
 router.post('/api/fileanalyse', upload.single('upfile'), async (req, res, next) => {
-  console.log(req.file)
   res.json({
     name: req.file?.originalname,
     type: req.file?.mimetype,
