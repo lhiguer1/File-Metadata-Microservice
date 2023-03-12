@@ -7,6 +7,9 @@ var indexRouter = require('./routes/index');
 
 var app = express();
 
+var cors = require('cors');
+
+app.use(cors({ optionsSuccessStatus: 200 }));
 app.use(logger('dev'));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
